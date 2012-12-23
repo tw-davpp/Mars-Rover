@@ -9,13 +9,13 @@ import static org.junit.Assert.assertTrue;
 
 public class MarsRoverPositionCommandTest {
 	private MarsRoverPositionCommand command;
-	private MarsRoverFactory rover;
+	private Rover rover;
 	private Area area;
 
     @Before
 	public void setUp() throws Exception {
 		command = new MarsRoverPositionCommand();
-		rover = new MarsRoverOperate();
+		rover = new Rover();
 		area = new Area();
 	}
 
@@ -23,10 +23,10 @@ public class MarsRoverPositionCommandTest {
 	public void testExecute() {
         area.init(5, 5);
         rover.setArea(area);
-        command.setMarsRoverManager(rover);
+        command.setRover(rover);
         command.setCmdStr("1 2 N");
         command.execute();
-        Forward facing = rover.getFacing();
+        Direction facing = rover.getFacing();
         assertEquals(new Point(1, 2), rover.getSite());
 
         assertTrue(facing instanceof North);

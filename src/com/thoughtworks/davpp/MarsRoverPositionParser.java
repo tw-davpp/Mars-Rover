@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 public class MarsRoverPositionParser implements Parser{
     private String cmd;
     private Point point;
-    private Forward face;
+    private Direction face;
     private final String regex = "^(\\d*) (\\d*) ([E|S|W|N])$";
 
     public MarsRoverPositionParser(String cmd) {
@@ -17,7 +17,7 @@ public class MarsRoverPositionParser implements Parser{
         return point;
     }
 
-    public Forward getFace() {
+    public Direction getFace() {
         return face;
     }
 
@@ -33,7 +33,7 @@ public class MarsRoverPositionParser implements Parser{
         }
     }
 
-    private Forward judgeFace(char face) {
+    private Direction judgeFace(char face) {
         switch (face) {
             case 'N':
                 return new North();

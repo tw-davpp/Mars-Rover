@@ -1,23 +1,34 @@
 package com.thoughtworks.davpp;
 
-public class MarsRoversManager implements RoversManager {
-    private Forward forward;
+public class Rover {
+    private Direction facing;
     private Point site;
     private Area area;
     private String result;
     public final String outOfSpaceStr = "The Rover is Out Of Space.";
 
+    public Rover() {
+    }
+
+    public Rover(Area area) {
+        this.area = area;
+    }
+
+    public Rover(Area area, Point site, Direction facing) {
+        this.area = area;
+        this.site = site;
+        this.facing = facing;
+    }
+
     public void setArea(Area area) {
         this.area = area;
     }
 
-    @Override
-    public void setPosition(Point point, Forward face) {
+    public void setPosition(Point point, Direction face) {
         setSite(point);
-        forward = face;
+        this.facing = face;
     }
 
-    @Override
     public void explore(String instruction) {
         if (!isSafe()) {
             result = outOfSpaceStr;
@@ -37,26 +48,25 @@ public class MarsRoversManager implements RoversManager {
     private void action(char action) {
         switch (action) {
             case 'R':
-                forward = forward.turnRight();
+                this.facing = this.facing.turnRight();
                 break;
             case 'L':
-                forward = forward.turnLeft();
+                this.facing = this.facing.turnLeft();
                 break;
             case 'M':
-                forward.move(this);
+                site = this.facing.move(site);
                 break;
         }
     }
 
     private void createResult() {
-        result = site.getX() + " " + site.getY() + " " + forward;
+        result = site.getX() + " " + site.getY() + " " + this.facing;
     }
 
     private boolean isSafe() {
         return area.isSafe(site);
     }
 
-    @Override
     public Point getSite() {
         return site;
     }
@@ -65,13 +75,11 @@ public class MarsRoversManager implements RoversManager {
         this.site = site;
     }
 
-    @Override
     public String getResult() {
         return result;
     }
 
-    @Override
-    public Forward getFacing() {
-        return forward;
+    public Direction getFacing() {
+        return this.facing;
     }
 }

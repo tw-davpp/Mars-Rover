@@ -7,7 +7,7 @@ import static org.junit.Assert.assertEquals;
 
 public class MarsRoverManagerCommandTest {
 	private MarsRoversManagerCommand command;
-	private MarsRoverFactory manager;
+	private Rover manager;
 	private Area area;
 	private MarsRoverPositionCommand positionCmd;
 	private MarsRoverExploreCommand exploreCmd;
@@ -15,13 +15,13 @@ public class MarsRoverManagerCommandTest {
     @Before
 	public void setUp() throws Exception {
 		command = new MarsRoversManagerCommand();
-		manager = new MarsRoverOperate();
+		manager = new Rover();
 		area = new Area();
 		area.init(5, 5);
 		manager.setArea(area);
 
 		positionCmd = new MarsRoverPositionCommand();
-		positionCmd.setMarsRoverManager(manager);
+		positionCmd.setRover(manager);
 
 		exploreCmd = new MarsRoverExploreCommand();
 		exploreCmd.setMarsRoverManager(manager);

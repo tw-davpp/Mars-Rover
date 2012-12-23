@@ -7,13 +7,13 @@ import static org.junit.Assert.assertEquals;
 
 public class MarsRoverExploreCommandTest  {
 	private MarsRoverExploreCommand command;
-	private MarsRoverFactory rover;
+	private Rover rover;
 	private Area area;
 
     @Before
 	public void setUp() throws Exception {
 		command = new MarsRoverExploreCommand();
-		rover = new MarsRoverOperate();
+		rover = new Rover();
 		area = new Area();
 	}
 

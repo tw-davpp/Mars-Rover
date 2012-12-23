@@ -6,6 +6,14 @@ public class Area {
 	private final int left = 0;
 	private final int bottom = 0;
 
+    public Area() {
+    }
+
+    public Area(int right, int upper) {
+        this.right = right;
+        this.upper = upper;
+    }
+
     public void init(int right, int upper) {
         this.right = right;
         this.upper = upper;

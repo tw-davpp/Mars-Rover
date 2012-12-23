@@ -7,8 +7,8 @@ public class Builder {
 		initCommand = new InitCommand(area);
 		invoker.setInitCommand(initCommand);
 
-		manager = new MarsRoverOperate();
-		manager.setArea(area);
+		rover = new Rover();
+		rover.setArea(area);
 
 		marsRoverManagerCommand = new MarsRoversManagerCommand();
 		invoker.setMarsRoverCommand(marsRoverManagerCommand);
@@ -23,26 +23,28 @@ public class Builder {
 	}
 
 	public void setMarsRoverPositionCommand(String str) {
-		MarsRoverPositionCommand marsRoverPositionCommand = new MarsRoverPositionCommand();
-		marsRoverPositionCommand.setMarsRoverManager(manager);
+		MarsRoverPositionCommand marsRoverPositionCommand = new MarsRoverPositionCommand(rover);
 		marsRoverPositionCommand.setCmdStr(str);
 		marsRoverManagerCommand.addCommand(marsRoverPositionCommand);
 	}
 
+    private void addManagerCommand(){
+
+    }
+
 	public void setMarsRoverExploreCommand(String str) {
-		MarsRoverExploreCommand marsRoverExploreCommand = new MarsRoverExploreCommand();
-		marsRoverExploreCommand.setMarsRoverManager(manager);
+		MarsRoverExploreCommand marsRoverExploreCommand = new MarsRoverExploreCommand(rover);
 		marsRoverExploreCommand.setCmdStr(str);
 		marsRoverManagerCommand.addCommand(marsRoverExploreCommand);
 	}
 
 	public String getResult() {
-		return manager.getResult();
+		return rover.getResult();
 	}
 
 	private Invoker invoker;
 	private Area area;
 	private ParseCommand initCommand;
-	private MarsRoverFactory manager;
+	private Rover rover;
 	private MarsRoversManagerCommand marsRoverManagerCommand;
 }

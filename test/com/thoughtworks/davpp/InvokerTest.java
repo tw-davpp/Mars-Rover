@@ -12,7 +12,7 @@ public class InvokerTest  {
 	private Area area;
 	private ParseCommand initCommand;
 	private MarsRoversManagerCommand marsRoverCommand;
-	private MarsRoverFactory rover;
+	private Rover rover;
 
     @Before
 	public void setUp() throws Exception {
@@ -20,7 +20,7 @@ public class InvokerTest  {
 		area = new Area();
 		initCommand = new InitCommand(area);
 		marsRoverCommand = new MarsRoversManagerCommand();
-		rover = new MarsRoverOperate();
+		rover = new Rover();
 		rover.setArea(area);
 	}
 
@@ -42,7 +42,7 @@ public class InvokerTest  {
 		invoker.initArea(cmdStr);
 
 		MarsRoverPositionCommand posCmd = new MarsRoverPositionCommand();
-		posCmd.setMarsRoverManager(rover);
+		posCmd.setRover(rover);
 		posCmd.setCmdStr("1 2 N");
 
 		marsRoverCommand.addCommand(posCmd);
@@ -50,7 +50,7 @@ public class InvokerTest  {
 		invoker.runMarsRover();
 
 		Point point = rover.getSite();
-		Forward face = rover.getFacing();
+		Direction face = rover.getFacing();
 		assertEquals(new Point(1, 2), point);
         assertTrue(face instanceof North);
     }

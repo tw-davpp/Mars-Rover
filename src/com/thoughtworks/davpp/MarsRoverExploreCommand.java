@@ -1,10 +1,14 @@
 package com.thoughtworks.davpp;
 
 public class MarsRoverExploreCommand extends ParseCommand {
-	private MarsRoverFactory manager = null;
+	private Rover rover = null;
 
-	public void setMarsRoverManager(MarsRoverFactory manager) {
-		this.manager = manager;
+    public MarsRoverExploreCommand(Rover rover) {
+        this.rover = rover;
+    }
+
+    public void setMarsRoverManager(Rover manager) {
+		this.rover = manager;
 	}
 
     @Override
@@ -12,7 +16,7 @@ public class MarsRoverExploreCommand extends ParseCommand {
         MarsRoverExploreParser marsRoverExploreParser = new MarsRoverExploreParser(cmdStr);
         marsRoverExploreParser.parse();
         if (marsRoverExploreParser.matchCondition()) {
-            manager.explore(cmdStr);
+            rover.explore(cmdStr);
         }
     }
 }

@@ -1,23 +1,28 @@
 package com.thoughtworks.davpp;
 
-public class East implements Forward {
+public class East implements Direction {
 	@Override
-	public void move(MarsRoversManager manager) {
+	public void move(Rover manager) {
 		Point point = manager.getSite();
 		manager.setSite(new Point(point.getX() + 1, point.getY()));
 	}
 
 	@Override
-	public Forward turnLeft() {
+	public Direction turnLeft() {
 		return new North();
 	}
 
 	@Override
-	public Forward turnRight() {
+	public Direction turnRight() {
 		return new South();
 	}
 
-	public String toString() {
+    @Override
+    public Point move(Point point) {
+        return new Point(point.getX()+1,point.getY());
+    }
+
+    public String toString() {
 		return "E";
 	}
 }

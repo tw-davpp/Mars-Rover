@@ -1,17 +1,21 @@
 package com.thoughtworks.davpp;
 
 public class MarsRoverPositionCommand extends ParseCommand {
-	private MarsRoverFactory manager = null;
+	private Rover rover = null;
 
-	public void setMarsRoverManager(MarsRoverFactory manager) {
-		this.manager = manager;
+    public MarsRoverPositionCommand(Rover rover) {
+        this.rover = rover;
+    }
+
+    public void setRover(Rover manager) {
+		this.rover = manager;
 	}
 
     @Override
     public void configure() {
         MarsRoverPositionParser parser = new MarsRoverPositionParser(cmdStr);
         parser.parse();
-        manager.setPosition(parser.getPoint(), parser.getFace());
+        rover.setPosition(parser.getPoint(), parser.getFace());
     }
 
 }

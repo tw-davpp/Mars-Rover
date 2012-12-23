@@ -12,7 +12,7 @@ public class MarsRoverPositionParserTest {
         marsRoverPositionParser.parse();
 
         assertEquals(new Point(10, 11), marsRoverPositionParser.getPoint());
-        Forward forward = marsRoverPositionParser.getFace();
-        assertTrue(forward instanceof North);
+        Direction direction = marsRoverPositionParser.getFace();
+        assertTrue(direction instanceof North);
     }
 }

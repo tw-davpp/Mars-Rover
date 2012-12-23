@@ -8,11 +8,13 @@ import java.io.StringBufferInputStream;
 public class Client {
 	public Client() {
 		in = new BufferedReader(new InputStreamReader(System.in));
+        init();
 	}
 
 	public Client(String str) {
 		in = new BufferedReader(new InputStreamReader(
 				new StringBufferInputStream(str)));
+        init();
 	}
 
 	public void init() {
@@ -61,7 +63,6 @@ public class Client {
 
 	public static void main(String[] args) {
 		Client client = new Client();
-		client.init();
 		while (true)
 			client.run();
 	}
