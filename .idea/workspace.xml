@@ -99,82 +99,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RoverPositionCommand.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/davpp/RoverPositionCommand.java">
+      <file leaf-file-name="RoverExploreCommand.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/davpp/RoverExploreCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="13" selection-start="46" selection-end="46" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RoversManagerCommand.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/davpp/RoversManagerCommand.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="13" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="North.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/davpp/North.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="13" selection-start="46" selection-end="46" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ParseCommand.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/davpp/ParseCommand.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="75" selection-start="260" selection-end="260" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Point.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/davpp/Point.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="13" selection-start="46" selection-end="46" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Parser.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/davpp/Parser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="17" selection-start="50" selection-end="50" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Rover.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/davpp/Rover.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="13" selection-start="46" selection-end="46" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="South.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/davpp/South.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="13" selection-start="46" selection-end="46" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="West.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/davpp/West.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="0" selection-start="356" selection-end="356" vertical-scroll-proportion="0.655527">
+            <state line="15" column="31" selection-start="460" selection-end="460" vertical-scroll-proportion="0.5382775">
               <folding />
             </state>
           </provider>
@@ -605,7 +533,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="959" height="576" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32897604" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -621,7 +549,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30010954" sideWeight="0.5404814" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30010954" sideWeight="0.5404814" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4595186" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Phing Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -719,16 +647,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/davpp/RoverExploreCommand.java">
+    <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/davpp/RoverExploreParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="13" selection-start="46" selection-end="46" vertical-scroll-proportion="0.0">
+        <state line="5" column="13" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/davpp/RoverExploreParser.java">
+    <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/davpp/West.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0">
+        <state line="18" column="35" selection-start="387" selection-end="387" vertical-scroll-proportion="0.6940874">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/davpp/South.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="13" selection-start="46" selection-end="46" vertical-scroll-proportion="0.077120826">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/davpp/Rover.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="13" selection-start="46" selection-end="46" vertical-scroll-proportion="0.07317073">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/davpp/Parser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="17" selection-start="50" selection-end="50" vertical-scroll-proportion="0.07317073">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/davpp/Point.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="13" selection-start="46" selection-end="46" vertical-scroll-proportion="0.07317073">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/davpp/ParseCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="75" selection-start="260" selection-end="260" vertical-scroll-proportion="0.4390244">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/davpp/North.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="13" selection-start="46" selection-end="46" vertical-scroll-proportion="0.07317073">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/davpp/RoversManagerCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="13" selection-start="104" selection-end="104" vertical-scroll-proportion="0.13921113">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/davpp/RoverPositionCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="13" selection-start="46" selection-end="46" vertical-scroll-proportion="0.06960557">
           <folding />
         </state>
       </provider>
@@ -740,65 +724,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/davpp/RoverPositionCommand.java">
+    <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/davpp/RoverExploreCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="13" selection-start="46" selection-end="46" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/davpp/RoversManagerCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/davpp/North.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="13" selection-start="46" selection-end="46" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/davpp/ParseCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="75" selection-start="260" selection-end="260" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/davpp/Point.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="13" selection-start="46" selection-end="46" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/davpp/Parser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="17" selection-start="50" selection-end="50" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/davpp/Rover.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="13" selection-start="46" selection-end="46" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/davpp/South.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="13" selection-start="46" selection-end="46" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/davpp/West.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="356" selection-end="356" vertical-scroll-proportion="0.655527">
+        <state line="15" column="31" selection-start="460" selection-end="460" vertical-scroll-proportion="0.5382775">
           <folding />
         </state>
       </provider>
