@@ -11,14 +11,14 @@ public class InvokerTest  {
 	private Invoker invoker;
 	private Area area;
 	private InitCommand initCommand;
-	private MarsRoversManagerCommand marsRoverCommand;
+	private RoversManagerCommand marsRoverCommand;
 	private Rover rover;
 
     @Before
 	public void setUp() throws Exception {
         String cmdStr = "5 5";
         initCommand = new InitCommand(cmdStr);
-        marsRoverCommand = new MarsRoversManagerCommand();
+        marsRoverCommand = new RoversManagerCommand();
 		invoker = new Invoker(initCommand,marsRoverCommand);
         area = initCommand.getArea();
         rover = new Rover(area);
@@ -34,7 +34,7 @@ public class InvokerTest  {
 
     @Test
 	public void testRunMarsRover() {
-		MarsRoverPositionCommand posCmd = new MarsRoverPositionCommand(rover);
+		RoverPositionCommand posCmd = new RoverPositionCommand(rover);
 		posCmd.setCmdStr("1 2 N");
 
 		marsRoverCommand.addCommand(posCmd);

@@ -3,7 +3,7 @@ package com.thoughtworks.davpp;
 public class Builder {
     public Builder(String strInit) {
         initCommand = new InitCommand(strInit);
-        marsRoverManagerCommand = new MarsRoversManagerCommand();
+        marsRoverManagerCommand = new RoversManagerCommand();
         Invoker invoker = new Invoker(initCommand,marsRoverManagerCommand);
 
         Area area = initCommand.getArea();
@@ -15,7 +15,7 @@ public class Builder {
 	}
 
 	public void setMarsRoverPositionCommand(String str) {
-		MarsRoverPositionCommand marsRoverPositionCommand = new MarsRoverPositionCommand(rover);
+		RoverPositionCommand marsRoverPositionCommand = new RoverPositionCommand(rover);
 	    addManagerCommand(marsRoverPositionCommand,str);
     }
 
@@ -25,7 +25,7 @@ public class Builder {
     }
 
 	public void setMarsRoverExploreCommand(String str) {
-		MarsRoverExploreCommand marsRoverExploreCommand = new MarsRoverExploreCommand(rover);
+		RoverExploreCommand marsRoverExploreCommand = new RoverExploreCommand(rover);
         addManagerCommand(marsRoverExploreCommand, str);
     }
 
@@ -35,5 +35,5 @@ public class Builder {
 
 	private InitCommand initCommand;
 	private Rover rover;
-	private MarsRoversManagerCommand marsRoverManagerCommand;
+	private RoversManagerCommand marsRoverManagerCommand;
 }
