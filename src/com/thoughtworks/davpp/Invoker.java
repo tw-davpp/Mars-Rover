@@ -1,20 +1,17 @@
 package com.thoughtworks.davpp;
 
 public class Invoker {
-	private ParseCommand initCommand;
+	private InitCommand initCommand;
 	private Command marsRoverCommand;
 
-	public void setInitCommand(ParseCommand cmd) {
-		this.initCommand = cmd;
-	}
+    public Invoker(InitCommand initCommand, Command marsRoverCommand) {
+        this.initCommand = initCommand;
+        this.marsRoverCommand = marsRoverCommand;
+        initArea();
+    }
 
-	public void initArea(String cmdStr) {
-		initCommand.setCmdStr(cmdStr);
+	private void initArea() {
 		initCommand.execute();
-	}
-
-	public void setMarsRoverCommand(Command cmd) {
-		this.marsRoverCommand = cmd;
 	}
 
 	public void runMarsRover() {

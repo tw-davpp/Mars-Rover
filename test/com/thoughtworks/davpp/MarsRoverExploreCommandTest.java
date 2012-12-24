@@ -12,17 +12,14 @@ public class MarsRoverExploreCommandTest  {
 
     @Before
 	public void setUp() throws Exception {
-		command = new MarsRoverExploreCommand();
-		rover = new Rover();
-		area = new Area();
-	}
+        area = new Area(5, 5);
+        rover = new Rover(area);
+        command = new MarsRoverExploreCommand(rover);
+    }
 
     @Test
 	public void testExecute() {
-        area.init(5, 5);
-        rover.setArea(area);
         rover.setPosition(new Point(1, 2), new North());
-        command.setMarsRoverManager(rover);
         command.setCmdStr("LMLMLMLMM");
         command.execute();
         String result = rover.getResult();
@@ -31,10 +28,7 @@ public class MarsRoverExploreCommandTest  {
 
     @Test
     public void test_explore_with_wrong_command() throws Exception {
-        area.init(5, 5);
-        rover.setArea(area);
         rover.setPosition(new Point(1, 2), new North());
-        command.setMarsRoverManager(rover);
         command.setCmdStr("LMLMNLMLMM");
         command.execute();
         String result = rover.getResult();

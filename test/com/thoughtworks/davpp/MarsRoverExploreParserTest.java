@@ -11,7 +11,6 @@ public class MarsRoverExploreParserTest {
         String cmd = "LMLMLMRRLMRLMRLRM";
         MarsRoverExploreParser marsroverExploreParser = new MarsRoverExploreParser(cmd);
         marsroverExploreParser.parse();
-
         assertTrue(marsroverExploreParser.matchCondition());
     }
 

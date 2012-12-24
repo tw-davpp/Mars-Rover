@@ -18,10 +18,8 @@ public class Client {
 	}
 
 	public void init() {
-		builder = new Builder();
-		builder.init();
-		String strInit = readLine();
-		builder.setInitArea(strInit);
+        String strInit = readLine();
+		builder = new Builder(strInit);
 	}
 
 	public void run() {

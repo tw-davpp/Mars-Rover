@@ -3,16 +3,20 @@ package com.thoughtworks.davpp;
 public class InitCommand extends ParseCommand {
     private Area area;
 
+    public InitCommand(String cmdStr) {
+        this.cmdStr = cmdStr;
+    }
+
     @Override
     public void configure() {
         AreaParser parser = new AreaParser(cmdStr);
         parser.parse();
         int right = parser.getRight();
         int upper = parser.getUpper();
-        area.init(right, upper);
+        area = new Area(right,upper);
     }
 
-	public InitCommand(Area area) {
-		this.area = area;
+    public Area getArea() {
+        return area;
     }
 }

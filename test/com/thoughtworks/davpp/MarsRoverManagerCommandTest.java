@@ -7,7 +7,7 @@ import static org.junit.Assert.assertEquals;
 
 public class MarsRoverManagerCommandTest {
 	private MarsRoversManagerCommand command;
-	private Rover manager;
+	private Rover rover;
 	private Area area;
 	private MarsRoverPositionCommand positionCmd;
 	private MarsRoverExploreCommand exploreCmd;
@@ -15,16 +15,11 @@ public class MarsRoverManagerCommandTest {
     @Before
 	public void setUp() throws Exception {
 		command = new MarsRoversManagerCommand();
-		manager = new Rover();
-		area = new Area();
-		area.init(5, 5);
-		manager.setArea(area);
+		area = new Area(5,5);
+        rover = new Rover(area);
 
-		positionCmd = new MarsRoverPositionCommand();
-		positionCmd.setRover(manager);
-
-		exploreCmd = new MarsRoverExploreCommand();
-		exploreCmd.setMarsRoverManager(manager);
+		positionCmd = new MarsRoverPositionCommand(rover);
+		exploreCmd = new MarsRoverExploreCommand(rover);
 	}
 
     @Test
@@ -35,7 +30,7 @@ public class MarsRoverManagerCommandTest {
 		command.addCommand(exploreCmd);
 		command.execute();
 
-		String result = manager.getResult();
+		String result = rover.getResult();
 	    assertEquals("1 3 N", result);
 	}
 }

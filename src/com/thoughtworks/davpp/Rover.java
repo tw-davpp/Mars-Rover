@@ -7,9 +7,6 @@ public class Rover {
     private String result;
     public final String outOfSpaceStr = "The Rover is Out Of Space.";
 
-    public Rover() {
-    }
-
     public Rover(Area area) {
         this.area = area;
     }
@@ -18,10 +15,6 @@ public class Rover {
         this.area = area;
         this.site = site;
         this.facing = facing;
-    }
-
-    public void setArea(Area area) {
-        this.area = area;
     }
 
     public void setPosition(Point point, Direction face) {

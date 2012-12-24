@@ -10,26 +10,23 @@ import static org.junit.Assert.assertEquals;
 public class InvokerTest  {
 	private Invoker invoker;
 	private Area area;
-	private ParseCommand initCommand;
+	private InitCommand initCommand;
 	private MarsRoversManagerCommand marsRoverCommand;
 	private Rover rover;
 
     @Before
 	public void setUp() throws Exception {
-		invoker = new Invoker();
-		area = new Area();
-		initCommand = new InitCommand(area);
-		marsRoverCommand = new MarsRoversManagerCommand();
-		rover = new Rover();
-		rover.setArea(area);
-	}
+        String cmdStr = "5 5";
+        initCommand = new InitCommand(cmdStr);
+        marsRoverCommand = new MarsRoversManagerCommand();
+		invoker = new Invoker(initCommand,marsRoverCommand);
+        area = initCommand.getArea();
+        rover = new Rover(area);
+    }
 
     @Test
 	public void testInitArea() {
-		String cmdStr = "5 5";
-		invoker.setInitCommand(initCommand);
-		invoker.initArea(cmdStr);
-		int right = area.getRight();
+        int right = area.getRight();
 		int upper = area.getUpper();
 		assertEquals(5, right);
 		assertEquals(5, upper);
@@ -37,16 +34,10 @@ public class InvokerTest  {
 
     @Test
 	public void testRunMarsRover() {
-		String cmdStr = "5 5";
-		invoker.setInitCommand(initCommand);
-		invoker.initArea(cmdStr);
-
-		MarsRoverPositionCommand posCmd = new MarsRoverPositionCommand();
-		posCmd.setRover(rover);
+		MarsRoverPositionCommand posCmd = new MarsRoverPositionCommand(rover);
 		posCmd.setCmdStr("1 2 N");
 
 		marsRoverCommand.addCommand(posCmd);
-		invoker.setMarsRoverCommand(marsRoverCommand);
 		invoker.runMarsRover();
 
 		Point point = rover.getSite();

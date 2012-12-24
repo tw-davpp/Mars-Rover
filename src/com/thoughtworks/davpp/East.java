@@ -2,12 +2,6 @@ package com.thoughtworks.davpp;
 
 public class East implements Direction {
 	@Override
-	public void move(Rover manager) {
-		Point point = manager.getSite();
-		manager.setSite(new Point(point.getX() + 1, point.getY()));
-	}
-
-	@Override
 	public Direction turnLeft() {
 		return new North();
 	}

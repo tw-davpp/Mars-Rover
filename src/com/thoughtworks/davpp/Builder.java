@@ -1,22 +1,14 @@
 package com.thoughtworks.davpp;
 
 public class Builder {
-	public void init() {
-		invoker = new Invoker();
-		area = new Area();
-		initCommand = new InitCommand(area);
-		invoker.setInitCommand(initCommand);
+    public Builder(String strInit) {
+        initCommand = new InitCommand(strInit);
+        marsRoverManagerCommand = new MarsRoversManagerCommand();
+        Invoker invoker = new Invoker(initCommand,marsRoverManagerCommand);
 
-		rover = new Rover();
-		rover.setArea(area);
-
-		marsRoverManagerCommand = new MarsRoversManagerCommand();
-		invoker.setMarsRoverCommand(marsRoverManagerCommand);
-	}
-
-	public void setInitArea(String str) {
-		invoker.initArea(str);
-	}
+        Area area = initCommand.getArea();
+        rover = new Rover(area);
+    }
 
 	public void runMarsRoverManager() {
 		marsRoverManagerCommand.execute();
@@ -24,27 +16,24 @@ public class Builder {
 
 	public void setMarsRoverPositionCommand(String str) {
 		MarsRoverPositionCommand marsRoverPositionCommand = new MarsRoverPositionCommand(rover);
-		marsRoverPositionCommand.setCmdStr(str);
-		marsRoverManagerCommand.addCommand(marsRoverPositionCommand);
-	}
+	    addManagerCommand(marsRoverPositionCommand,str);
+    }
 
-    private void addManagerCommand(){
-
+    private void addManagerCommand(ParseCommand pc,String cmdStr) {
+        pc.setCmdStr(cmdStr);
+        marsRoverManagerCommand.addCommand(pc);
     }
 
 	public void setMarsRoverExploreCommand(String str) {
 		MarsRoverExploreCommand marsRoverExploreCommand = new MarsRoverExploreCommand(rover);
-		marsRoverExploreCommand.setCmdStr(str);
-		marsRoverManagerCommand.addCommand(marsRoverExploreCommand);
-	}
+        addManagerCommand(marsRoverExploreCommand, str);
+    }
 
 	public String getResult() {
 		return rover.getResult();
 	}
 
-	private Invoker invoker;
-	private Area area;
-	private ParseCommand initCommand;
+	private InitCommand initCommand;
 	private Rover rover;
 	private MarsRoversManagerCommand marsRoverManagerCommand;
 }
